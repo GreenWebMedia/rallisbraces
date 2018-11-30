@@ -1,0 +1,56 @@
+.contact-form.confm-box
+  form.home-form(action='http://rallisbraces.rgwplogin.com/post-appointment-thank-you/' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='313')
+      input(type='hidden' name='_wpcf7_version' value='5.0.5')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f313-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+    label.first
+      span Please describe your experience visiting our practice.
+      textarea(name='describeyourexperience', type='textarea', class='comment-box', id='describeyourexperience')
+    label.first
+      span Please describe your experience working with the doctor(s) and staff.
+      textarea(name='describewithdoctor', type='textarea', class='comment-box', id='describewithdoctor')
+    label.first
+      span What was your favorite thing about being at our practice?
+      textarea(name='favoritething', type='textarea', class='comment-box', id='favoritething')
+    label.first
+      span What areas could we improve upon to make your experience even more enjoyable?
+      textarea(name='improvearea', type='textarea', class='comment-box', id='improvearea')
+    p How would you rate your overall experience?
+      span.wpcf7-list-item#average-edit(for='Poor')
+        input.average-radio(name='overallexperience', type='radio', checked='checked' id='overallexperience')
+        |  Poor
+      span.wpcf7-list-item#average-edit(for='Average')
+        input.average-radio(name='overallexperience', type='radio'  id='overallexperience')
+        |  Average
+      span.wpcf7-list-item#average-edit(for='Good')
+        input.average-radio(name='overallexperience', type='radio',  checked='checked' id='overallexperience')
+        |  Good
+      span.wpcf7-list-item#average-edit(for='Great')
+        input.average-radio(name='overallexperience', type='radio'  id='overallexperience')
+        |  Great        
+    label.first
+      span Please provide any additional comments/suggestions.
+      textarea(name='commentsuggestion', type='textarea', class='comment-box', id='commentsuggestion')
+    hr
+    h2 Contact Information:
+    label.first
+      Would you like a member of our team to contact you to further discuss your experience?
+      br
+      select.formDropdown(name='furtherdiscuss', class='control-select-edit', id='furtherdiscuss' onChange='getDropDown(this)')
+          option(value='') -Select an option-
+          option(value='Yes') Yes
+          option(value='No') No thank you; see you at my next appointment.
+    #pro-name-emial(style="display:none;")
+     h2 Please provide your name and email address:
+     label.required.first
+      span Your Name
+      input(name='yourname', id='yourname', class='control-form-edit', type='text')
+      span.quiet First and Last
+     label.required.first
+      span Your Email Address:
+      input(name='youremailaddress', type='email', class='control-form-edit', id='emailID2')
+    hr          
+    input(type='submit', class='appoint-button', value='Submit Feedback' onclick='return validatePost()') 

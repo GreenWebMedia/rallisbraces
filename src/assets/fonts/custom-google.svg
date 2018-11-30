@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata/>
+<defs>
+<font id="custom-googleregular" horiz-adv-x="0">
+<font-face units-per-em="1024" ascent="960" descent="-64"/>
+<missing-glyph horiz-adv-x="512"/>
+<glyph d="M0 0v0v0v0z"/>
+<glyph d="M0 0v0v0v0z"/>
+<glyph d="M0 0v0v0v0z"/>
+<glyph unicode=" " horiz-adv-x="512" d="M0 0v0v0v0z"/>
+<glyph unicode="◼" horiz-adv-x="500" d="M0 0v0v0v0v0z"/>
+<glyph unicode="" horiz-adv-x="1024" d="M479 925h34h34q2 0 4 -0.5t3 -0.5q19 -3 37 -5.5t36 -6.5q70 -20 127 -52t101 -77t75 -102.5t49 -127.5q3 -12 5 -24.5t5 -25.5v-54.5v-54.5q-1 -1 -1.5 -2.5t-0.5 -2.5q-5 -22 -9 -44t-11 -43q-23 -67 -58 -120t-81 -93.5t-104 -68t-126 -42.5q-13 -2 -25.5 -3.5 t-25.5 -3.5h-33.5h-34.5q-1 0 -2 0.5t-2 0.5q-18 3 -35.5 5t-34.5 6q-76 18 -140.5 57.5t-112.5 95t-77.5 125t-36.5 148.5q-5 62 5 122t37 117q27 55 62 99.5t78.5 78.5t96 57t112.5 35q12 2 25 3.5t25 3.5v0zM530 594q-4 4 -8 7.5t-8 6.5q-54 39 -118.5 36.5t-116.5 -45.5 q-34 -28 -51 -66t-17.5 -78.5t15.5 -79t48 -66.5q33 -28 70.5 -40t80.5 -8q36 4 66.5 18.5t52.5 43.5q28 35 36.5 74.5t3.5 82.5q-1 7 -4 9t-10 2h-78.5h-78.5h-5.5h-5.5v-39v-39h50.5h52.5q-3 -8 -5.5 -14.5t-5.5 -12.5q-15 -26 -45.5 -39t-62.5 -8q-48 9 -75 48t-19 87 q9 47 49.5 73.5t86.5 14.5q12 -3 24 -9.5t24 -12.5q12 13 26 26.5t28 27.5v0zM697 552v-32.5v-33.5h-33.5h-32.5v-25v-24h33.5h33.5v-33.5v-32.5h24.5h24.5v33v33h33h33v25v24h-33.5h-33.5v33.5v32.5h-24h-25v0z"/>
+</font>
+</defs></svg>

@@ -1,0 +1,27 @@
+.pages-home.inner-page
+  Loader(v-show='loading')   
+  div(v-if='props')
+    Header
+    #interior
+      .subnav-outer.mobile
+        .container.row
+          p
+            router-link(to='/suresmile-info') SureSmile® Info
+            |  | 
+            router-link(to='/suresmile-faqs') SureSmile® FAQs
+            |  | 
+            router-link(to='/how-suresmile-works') How SureSmile® Works
+            |  | 
+            router-link(to='/suresmile-comparison') SureSmile® Comparison
+            |  | 
+            router-link(to='/suresmile-before-and-after') SureSmile® Before and After
+            |  | 
+            router-link(to='/the-suresmile-process') The SureSmile® Process
+            |  | 
+            router-link(to='/suresmile-testimonials') SureSmile® Testimonials                         
+      .container.row.interior-content
+        header
+          h1(v-if='props.acf.heading' v-html='props.acf.heading')        
+        #main-content2( v-if='props' v-html='props.content.rendered')                
+    Footer
+      

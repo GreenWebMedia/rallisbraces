@@ -1,0 +1,30 @@
+.pages-home.inner-page
+  Loader(v-show='loading')   
+  div(v-if='props')
+    Header
+    #interior
+      .subnav-outer.mobile
+        .container.row
+          p
+            router-link(to='/for-all-ages') For All Ages
+            |  | 
+            router-link(to='/common-orthodontic-issues') Common Orthodontic Issues
+            |  | 
+            router-link(to='/surgical-orthodontics') Surgical Orthodontics
+            |  | 
+            router-link(to='/invisalign') Invisalign®
+            |  | 
+            router-link(to='/invisalign-teen') Invisalign Teen®
+            |  | 
+            router-link(to='/forsus') Forsus™
+            |  | 
+            router-link(to='/i-cat') i‐CAT®
+            |  | 
+            router-link(to='/acceledent-aura') AcceleDent® Aura             
+      .container.row.interior-content
+        header
+          h1(v-if='props.acf.heading' v-html='props.acf.heading')
+        #sidebar          
+        #main-content( v-if='props' v-html='props.content.rendered')         
+    Footer
+      

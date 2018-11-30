@@ -1,0 +1,27 @@
+.contact-form.confm-box
+  form.home-form(action='http://rallisbraces.rgwplogin.com/appointment-thank-you' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='309')
+      input(type='hidden' name='_wpcf7_version' value='5.0.5')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f309-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+    label.required.first
+      span Your Name
+      input(name='YourName', id='flname', class='control-form-edit', type='text')
+      span.quiet First and Last
+    label.required.first
+      span Your Email Address:
+      input(name='youremail', type='email', class='control-form-edit', id='emailID')
+    label.required.first
+      span Your Phone Number
+      input(name='yourphone', type='text', class='control-form-edit', id='yphone')
+    label.first
+      span Comment:
+      textarea(name='comment', type='textarea', class='comment-box', id='commentID')
+    label
+      input(type='submit', class='appoint-button', value='Submit Request' onclick='return validateFormAppoint()')      
+      
+         
+    
+         

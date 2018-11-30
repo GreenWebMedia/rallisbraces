@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" role='main'>
+  <head>
+    <title>Rooster Grin Vue Boilerplate</title>
+
+    <!-- General META -->
+    <meta charset='utf-8'>
+    <meta http-equiv='Cache-control' content='public'>
+
+    <!-- SEO META -->
+    <meta name='description'>
+    <meta name='keywords'>
+
+    <!-- Responsive META -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Tag Manager -->
+    <!-- SET YOUR GOOGLE FONT IN THE ENQUEUE.PHP FILE FOR BEST SPEED -->
+
+  </head>
+  <body id="top">
+    <div id='app' role='application'></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans:400,600' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    
+    <script>
+    var timeOut;
+function scrollToTop() {
+    if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+        window.scrollBy(0,-50);
+        timeOut=setTimeout('scrollToTop()',10);
+    }
+    else clearTimeout(timeOut);
+}
+</script>
+
+ <script type="text/javascript">
+          function validateFormAppoint() { 
+            var flname = document.getElementById("flname").value;
+            var emailID = document.getElementById("emailID").value;
+            var yphone = document.getElementById("yphone").value;
+            var commentID = document.getElementById("commentID").value;
+            var atpos = emailID.indexOf("@");
+            var dotpos = emailID.lastIndexOf(".");
+            if (flname == "") {
+                alert("Please Enter Your Name");
+                return false;
+            } else if (emailID == "") {
+                alert("Please enter an email address.");
+                return false;
+            } else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailID.length) {
+                alert("Please enter a valid email address.");
+                return false;
+            } else if (yphone == "") {
+                alert("Please Enter Your Phone Number");
+                return false;
+            }
+        }
+      </script>
+
+ <script type="text/javascript">
+          function validateFormfriend() { 
+            var flname1 = document.getElementById("flname1").value;
+            var emailID1 = document.getElementById("emailID1").value;
+            var referfriend = document.getElementById("referfriend").value;
+            var ptientphone = document.getElementById("ptientphone").value;
+            var patientemail = document.getElementById("patientemail").value;
+            var relationship = document.getElementById("relationship").value;
+            var atpos = emailID1.indexOf("@");
+            var dotpos = emailID1.lastIndexOf(".");
+            var atpos1 = patientemail.indexOf("@");
+            var dotpos1 = patientemail.lastIndexOf(".");
+            if (flname1 == "") {
+                alert("Please Enter Your Name");
+                return false;
+            } else if (emailID1 == "") {
+                alert("Please enter an email address.");
+                return false;
+            } else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailID1.length) {
+                alert("Please enter a valid email address.");
+                return false;            
+            } else if (referfriend == "") {
+                alert("Please enter Name of the Patient You are Referring");
+                return false;
+            } else if (ptientphone == "") {
+                alert("Please Enter Patient Phone Number");
+                return false;
+            } else if (patientemail == "") {
+                alert("Please Enter Patient's Email Address.");
+                return false;
+            } else if (atpos1<1 || dotpos1<atpos1+2 || dotpos1+2>=patientemail.length) {
+                alert("Please Enter a valid Patient's Email Address.");
+                return false;           
+            } else if (relationship == "") {
+                alert("Please Enter Relationship to New Patient");
+                return false;
+            }
+        }
+      </script> 
+
+      <script type="text/javascript">
+          function validatePost() { 
+            var describeyourexperience = document.getElementById("describeyourexperience").value;
+            var describewithdoctor = document.getElementById("describewithdoctor").value;
+            var favoritething = document.getElementById("favoritething").value;
+            var improvearea = document.getElementById("improvearea").value;
+            var overallexperience = document.getElementById("overallexperience").value;
+            var commentsuggestion = document.getElementById("commentsuggestion").value;
+            var furtherdiscuss = document.getElementById("furtherdiscuss").value;
+            var defaultValue = document.getElementById("dafaultvalue").innerHTML;
+            if (furtherdiscuss == "") {
+                alert("Please select an item from list");
+                return false;
+            }
+            if(defaultValue=='yes'){
+            var yourname = document.getElementById("yourname").value;
+            var emailID2 = document.getElementById("emailID2").value;            
+            var atpos = emailID2.indexOf("@");
+            var dotpos = emailID2.lastIndexOf(".");
+            if (yourname == "") {
+                alert("Please Enter Your Name");
+                return false;
+            } else if (emailID2 == "") {
+                alert("Please enter an email address.");
+                return false;
+            } else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailID2.length) {
+                alert("Please enter a valid email address.");
+                return false;
+            }       
+            }     
+        }
+      </script> 
+
+
+      <script type="text/javascript">
+ 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+//call btn
+
+function openCall() {
+    document.getElementById("mySidecall").style.width = "280px";
+}
+
+function closeCall() {
+    document.getElementById("mySidecall").style.width = "0";
+}
+
+function about() {
+   var x = document.getElementById("about");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("cosmetic").style.display = "none";
+    document.getElementById("missing").style.display = "none";
+    document.getElementById("other").style.display = "none";
+    document.getElementById("suresmilerallis").style.display = "none";
+    document.getElementById("contactrallis").style.display = "none";
+}
+function cosmetic() {
+   var x = document.getElementById("cosmetic");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("about").style.display = "none";
+    document.getElementById("missing").style.display = "none";
+    document.getElementById("other").style.display = "none";
+      document.getElementById("suresmilerallis").style.display = "none";
+    document.getElementById("contactrallis").style.display = "none";
+}
+function missing() {
+   var x = document.getElementById("missing");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("about").style.display = "none";
+    document.getElementById("cosmetic").style.display = "none";
+    document.getElementById("other").style.display = "none";
+      document.getElementById("suresmilerallis").style.display = "none";
+    document.getElementById("contactrallis").style.display = "none";
+}
+function other() {
+   var x = document.getElementById("other");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("about").style.display = "none";
+    document.getElementById("missing").style.display = "none";
+    document.getElementById("cosmetic").style.display = "none";
+    document.getElementById("suresmilerallis").style.display = "none";
+    document.getElementById("contactrallis").style.display = "none";
+}
+function suresmilerallis() {
+   var x = document.getElementById("suresmilerallis");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("about").style.display = "none";
+    document.getElementById("missing").style.display = "none";
+    document.getElementById("cosmetic").style.display = "none";
+    document.getElementById("other").style.display = "none";
+    document.getElementById("contactrallis").style.display = "none";
+}
+
+function contactrallis() {
+   var x = document.getElementById("contactrallis");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  document.getElementById("about").style.display = "none";
+    document.getElementById("missing").style.display = "none";
+    document.getElementById("cosmetic").style.display = "none";
+     document.getElementById("other").style.display = "none";
+    document.getElementById("suresmilerallis").style.display = "none";
+}
+
+
+//sidebar nav
+
+$(document).ready(function(){
+    $(".has-submenu").click(function(){
+        $(this).toggleClass("has-submenu-clicked");
+    $(this).siblings().removeClass("has-submenu-clicked");
+    });
+});
+
+$(document).ready(function(){
+    $(".mobile-nav-btn").click(function(){
+        $("#mySidecall").css("width", "0px");
+    });
+  $(".mobile-call").click(function(){
+        $("#mySidenav").css("width", "0px");
+    });
+});
+</script>
+
+<script type="text/javascript">
+function getDropDown(sel){
+
+if(document.getElementById('furtherdiscuss').value=='Yes'){
+    document.getElementById('dafaultvalue').innerHTML= 'Yes';
+    document.getElementById('pro-name-emial').style.display= 'block';
+    }else{
+    document.getElementById('pro-name-emial').style.display = 'none';
+     document.getElementById('dafaultvalue').innerHTML= 'no';
+  }
+}
+
+function hideAll(){
+  document.getElementById('pro-name-emial').style.display = 'none';  
+}
+</script>
+<span style='display:none;' id='dafaultvalue'>no</span>
+
+    
+  </body>
+</html>

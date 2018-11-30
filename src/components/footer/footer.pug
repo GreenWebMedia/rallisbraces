@@ -1,0 +1,43 @@
+.footer
+  footer#ft
+   .container.row
+    .logos
+      router-link(to='/invisalign')
+        img.shift(src='http://rallisbraces.rgwplogin.com/wp-content/uploads/2018/11/invisalign3.png' alt='Invisalign')
+      router-link(to='/invisalign-teen')
+        img.shift(src='http://rallisbraces.rgwplogin.com/wp-content/uploads/2018/11/invisalign-teen2.png' alt='Invisalign Teen')
+      router-link(to='/suresmile-info')
+        img.shift(src='http://rallisbraces.rgwplogin.com/wp-content/uploads/2018/11/suresmile.png' alt='Sure Smile')
+    .ft-locs
+      .loc.loc1
+        router-link.loc-name(to='/north-star-office') North Star Office
+        router-link.ft-map(to='/north-star-office')
+        router-link.ft-address(to='/north-star-office')
+          | 3256 Salt Creek Circle
+          br
+          | Lincoln, NE 68504
+      .loc.loc2
+        router-link.loc-name(to='/east-office') East Office
+        router-link.ft-map(to='/east-office')
+        router-link.ft-address(to='/east-office')
+          | 8328 Dawson Creek Bay
+          br
+          | Lincoln, NE 68505
+    .text-navigation
+      p.text-nav
+        router-link(to='/') Home
+        router-link(to='/meet-dr-rallis') Meet the Team
+        router-link(to='/treatment-options') For New Patients
+        router-link(to='/life-with-braces') Wearing Braces
+        router-link(to='/for-all-ages') Orthodontic Treatments
+        router-link(to='/suresmile-info') SureSmile&reg;
+        router-link(to='/north-star-office') Contact Us
+        a.patient-login.external(href='https://patient-portal-prd-cluster-2.sesamecommunications.com/prallis/index.html' target='_blank') Patient Login
+        a(href='https://www.rallisbraces.com/sitemap') Site Map
+  #ft-bnr
+   .container.row
+     a.back-to-top(href='#top' onclick='scrollToTop();return false')
+     // a.sesame-link.external(href='http://www.sesamecommunications.com/web-design/' target='_blank')
+      img(src='images/sesame.png' alt='sesame communications')
+      | Website Powered by Sesame 24-7&trade;
+

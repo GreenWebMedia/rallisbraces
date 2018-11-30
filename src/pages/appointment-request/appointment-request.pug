@@ -1,0 +1,27 @@
+.pages-home.inner-page
+  Loader(v-show='loading')   
+  div(v-if='props')
+    Header
+    #interior
+      .subnav-outer.mobile
+        .container.row
+          p
+            router-link(to='/north-star-office') North Star Office
+            |  | 
+            router-link(to='/east-office') East Office
+            |  | 
+            router-link(to='/appointment-request') Appointment Request
+            |  | 
+            router-link(to='/post-appointment-survey') Post-Appointment Survey
+            |  | 
+            router-link(to='/refer-a-friend') Refer a Friend                        
+      .container.row.interior-content
+        header
+          h1(v-if='props.acf.heading' v-html='props.acf.heading')
+        #sidebar
+          #hide-stock
+            img(v-bind:src='props.acf.side_image')
+        #main-content( v-if='props' v-html='props.content.rendered')
+        AppointmentRequest         
+    Footer
+      

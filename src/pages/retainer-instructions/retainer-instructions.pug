@@ -1,0 +1,34 @@
+.pages-home.inner-page
+  Loader(v-show='loading')   
+  div(v-if='props')
+    Header
+    #interior
+      .subnav-outer.mobile
+        .container.row
+          p
+            router-link(to='/life-with-braces') Life with Braces
+            |  | 
+            router-link(to='/brushing-and-flossing') Brushing and Flossing
+            |  | 
+            router-link(to='/orthodontic-faqs') Orthodontic FAQs
+            |  | 
+            router-link(to='/self-ligating-braces') Self-Ligating Braces
+            |  | 
+            router-link(to='/clear-braces') Clear Braces
+            |  | 
+            router-link(to='/clear-aligners') Clear Aligners
+            |  | 
+            router-link(to='/palatal-expander') Palatal Expander
+            |  | 
+            router-link(to='/retainer-instructions') Retainer Instructions
+            |  | 
+            router-link(to='/emergency-care') Emergency Care 
+      .container.row.interior-content
+        header
+          h1(v-if='props.acf.heading' v-html='props.acf.heading')
+        #sidebar
+          #hide-stock
+            img(v-bind:src='props.acf.side_image')
+        #main-content( v-if='props' v-html='props.content.rendered')         
+    Footer
+      

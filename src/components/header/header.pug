@@ -1,0 +1,249 @@
+.hello
+   div(v-if='props')
+   .side-menu-toggle
+   span.idw-icon-menu(onclick='openNav()')
+    i.fa.fa-bars
+   #mySidenav.sidenav
+    a.closebtn.idw-icon-close(href='javascript:void(0)' onclick='closeNav()')
+      i.fa.fa-times
+    ul
+      li
+        router-link(to='/') Home
+      li.has-submenu
+        router-link(to='/meet-dr-rallis') Meet the Team
+        span(onclick='about()')
+          i.fa.fa-plus
+        ul#about.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/meet-dr-rallis') Meet Dr. Rallis
+          li
+            router-link(to='/meet-dr-bonilla') Meet Dr. Bonilla
+          li
+            router-link(to='/meet-the-staff') Meet the Staff
+          li
+            router-link(to='/why-choose-us') Why Choose Us?          
+      li.has-submenu
+        router-link(to='/treatment-options') For New Patients
+        span(onclick='cosmetic()')
+          i.fa.fa-plus
+        ul#cosmetic.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/treatment-options') Treatment Options
+          li
+            router-link(to='/office-tour') Office Tour
+          li
+            router-link(to='/testimonials') Testimonials
+          li
+            router-link(to='/patient-forms') Patient Forms
+          li
+            router-link(to='/online-services') Online Services          
+      li.has-submenu
+        router-link(to='/life-with-braces') Wearing Braces
+        span(onclick='missing()')
+          i.fa.fa-plus
+        ul#missing.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/life-with-braces') Life with Braces
+          li
+            router-link(to='/brushing-and-flossing') Brushing and Flossing
+          li
+            router-link(to='/orthodontic-faqs') Orthodontic FAQs
+          li
+            router-link(to='/self-ligating-braces') Self-Ligating Braces 
+          li
+            router-link(to='/clear-braces') Clear Braces
+          li
+            router-link(to='/clear-aligners') Clear Aligners
+          li
+            router-link(to='/palatal-expander') Palatal Expander
+          li
+            router-link(to='/retainer-instructions') Retainer Instructions
+          li
+            router-link(to='/emergency-care') Emergency Care    
+      li.has-submenu
+        router-link(to='/for-all-ages') Orthodontic Treatments
+        span(onclick='other()')
+          i.fa.fa-plus
+        ul#other.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/for-all-ages') For All Ages
+          li
+            router-link(to='/common-orthodontic-issues') Common Orthodontic Issues
+          li
+            router-link(to='/surgical-orthodontics') Surgical Orthodontics
+          li
+            router-link(to='/invisalign') Invisalign®
+          li
+            router-link(to='/invisalign-teen') Invisalign Teen®
+          li
+            router-link(to='/forsus') Forsus™
+          li
+            router-link(to='/i-cat') i‐CAT®
+          li
+            router-link(to='/acceledent-aura') AcceleDent® Aura  
+      li.has-submenu
+        router-link(to='/suresmile-info') SureSmile®
+        span(onclick='suresmilerallis()')
+          i.fa.fa-plus
+        ul#suresmilerallis.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/suresmile-info') SureSmile® Info
+          li
+            router-link(to='/suresmile-faqs') SureSmile® FAQs
+          li
+            router-link(to='/how-suresmile-works') How SureSmile® Works
+          li
+            router-link(to='/suresmile-comparison') SureSmile® Comparison
+          li
+            router-link(to='/suresmile-before-and-after') SureSmile® Before and After
+          li
+            router-link(to='/the-suresmile-process') The SureSmile® Process
+          li
+            router-link(to='/suresmile-testimonials') SureSmile® Testimonials
+      li.has-submenu
+        router-link(to='/north-star-office') Contact Us
+        span(onclick='contactrallis()')
+          i.fa.fa-plus
+        ul#contactrallis.sidenav-submenu(style='display: none;')
+          li
+            router-link(to='/north-star-office') North Star Office
+          li
+            router-link(to='/east-office') East Office
+          li
+            router-link(to='/appointment-request') Appointment Request
+          li
+            router-link(to='/post-appointment-survey') Post-Appointment Survey
+          li
+            router-link(to='/refer-a-friend') Refer a Friend
+   header#hd                   
+    .container.row
+     router-link.logo(to='/')
+      img.shift(v-bind:src='props.acf.logo')
+     .hd-rt
+      a.dr-name(href='/meet-dr-rallis')
+        div(v-html:p='props.acf.paul_rallis')
+      .utility-nav
+        ul
+          li.patient-login.last
+            a#patient-login.patient-login.external(href='https://patient.sesamecommunications.com/prallis/index.html' target='_blank')
+              span(v-html:p='props.acf.patient_login')
+      .social-icons
+        a.social-facebook.external(href='https://www.facebook.com/RallisOrtho/' target='_blank')
+          i.fa.fa-facebook
+        a.showhim.external(href='https://plus.google.com/102130668323248758695/about' target='_blank')
+          span.showme North Star
+          i.fa.fa-custom-google-g
+        a.showhim.external(href='https://plus.google.com/111656302792048034548/about' target='_blank')
+          span.showme East
+          i.fa.fa-custom-google-g
+        a.social-healthgrades.external(href='http://www.healthgrades.com/dentist/dr-paul-rallis-3xpkf' target='_blank')
+          i.fa.fa-healthgrades
+      .hd-locs
+        .locs
+          router-link.hd-address(to='/north-star-office')
+            span(v-html:p='props.acf.location_first')
+          router-link.hd-address(to='/east-office')
+            span(v-html:p='props.acf.location_second')
+        .phone-wrap
+          span.phone (402) 742-3000
+    nav#main-nav.horizontal.clearfix
+     .collapsible
+      ul
+        li
+          router-link.router-link-active(to='/') Home
+        li
+          router-link(to='/meet-dr-rallis') Meet the Team
+          ul
+            li
+              router-link(to='/meet-dr-rallis') Meet Dr. Rallis
+            li
+              router-link(to='/meet-dr-bonilla') Meet Dr. Bonilla
+            li
+              router-link(to='/meet-the-staff') Meet the Staff
+            li
+              router-link(to='/why-choose-us') Why Choose Us?
+        li
+          router-link(to='/treatment-options') For New Patients
+          ul
+            li
+              router-link(to='/treatment-options') Treatment Options
+            li
+              router-link(to='/office-tour') Office Tour
+            li
+              router-link(to='/testimonials') Testimonials
+            li
+              router-link(to='/patient-forms') Patient Forms
+            li.online-services.last
+              router-link(to='/online-services') Online Services
+        li
+          router-link(to='/life-with-braces') Wearing Braces
+          ul
+            li
+              router-link(to='/life-with-braces') Life with Braces
+            li
+              router-link(to='/brushing-and-flossing') Brushing and Flossing
+            li
+              router-link(to='/orthodontic-faqs') Orthodontic FAQs
+            li
+              router-link(to='/self-ligating-braces') Self-Ligating Braces 
+            li
+              router-link(to='/clear-braces') Clear Braces
+            li
+              router-link(to='/clear-aligners') Clear Aligners
+            li
+              router-link(to='/palatal-expander') Palatal Expander
+            li
+              router-link(to='/retainer-instructions') Retainer Instructions
+            li
+              router-link(to='/emergency-care') Emergency Care
+        li
+          router-link(to='/for-all-ages') Orthodontic Treatments
+          ul
+            li
+             router-link(to='/for-all-ages') For All Ages
+            li
+              router-link(to='/common-orthodontic-issues') Common Orthodontic Issues
+            li
+              router-link(to='/surgical-orthodontics') Surgical Orthodontics
+            li
+              router-link(to='/invisalign') Invisalign®
+            li
+              router-link(to='/invisalign-teen') Invisalign Teen®
+            li
+              router-link(to='/forsus') Forsus™
+            li
+              router-link(to='/i-cat') i‐CAT®
+            li
+              router-link(to='/acceledent-aura') AcceleDent® Aura
+        li
+          router-link(to='/suresmile-info') SureSmile®
+          ul
+            li
+              router-link(to='/suresmile-info') SureSmile® Info
+            li
+              router-link(to='/suresmile-faqs') SureSmile® FAQs
+            li
+              router-link(to='/how-suresmile-works') How SureSmile® Works
+            li
+              router-link(to='/suresmile-comparison') SureSmile® Comparison
+            li
+              router-link(to='/suresmile-before-and-after') SureSmile® Before and After
+            li
+              router-link(to='/the-suresmile-process') The SureSmile® Process
+            li
+              router-link(to='/suresmile-testimonials') SureSmile® Testimonials
+        li
+         router-link(to='/north-star-office') Contact Us
+          ul
+            li
+              router-link(to='/north-star-office') North Star Office
+            li
+              router-link(to='/east-office') East Office
+            li
+              router-link(to='/appointment-request') Appointment Request
+            li
+              router-link(to='/post-appointment-survey') Post-Appointment Survey
+            li
+              router-link(to='/refer-a-friend') Refer a Friend
+
+  

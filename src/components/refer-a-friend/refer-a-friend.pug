@@ -1,0 +1,31 @@
+.contact-form.confm-box
+  form.home-form(action='http://rallisbraces.rgwplogin.com/refer-a-friend-thank-you/' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='311')
+      input(type='hidden' name='_wpcf7_version' value='5.0.5')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f311-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+    label.required.first
+      span Your Name
+      input(name='yourname', id='flname1', class='control-form-edit', type='text')
+      span.quiet First and Last
+    label.required.first
+      span Your Email Address:
+      input(name='youremail', type='email', class='control-form-edit', id='emailID1')
+    label.required.first
+      span Name of the Patient You are Referring:
+      input(name='patientname', id='referfriend', class='control-form-edit', type='text')
+      span.quiet First and Last
+    label.required.first
+      span Patient&apos;s Phone Number:
+      input(name='patientphone', type='text', class='control-form-edit', id='ptientphone')
+    label.required.first
+      span Patient&apos;s Email Address:
+      input(name='patientemail', type='email', class='control-form-edit', id='patientemail')
+    label.required.first
+      span Relationship to New Patient:
+      input(name='relationwithpatient', id='relationship', class='control-form-edit', type='text')
+    hr    
+    input(type='submit', class='appoint-button', value='Submit Referral' onclick='return validateFormfriend()')      
+        

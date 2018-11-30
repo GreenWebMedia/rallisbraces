@@ -1,0 +1,26 @@
+.pages-home.inner-page
+  Loader(v-show='loading')  
+  div(v-if='props')
+    Header
+    #interior
+      .subnav-outer.mobile
+        .container.row
+          p
+            router-link(to='/treatment-options') Treatment Options
+            |  | 
+            router-link(to='/office-tour') Office Tour
+            |  | 
+            router-link(to='/testimonials') Testimonials
+            |  | 
+            router-link(to='/patient-forms') Patient Forms
+            |  | 
+            router-link(to='/online-services') Online Services
+      .container.row.interior-content
+        header
+          h1(v-if='props.acf.heading' v-html='props.acf.heading')
+        #sidebar
+          #hide-stock
+            img(v-bind:src='props.acf.side_image')
+        #main-content( v-if='props' v-html='props.content.rendered')      
+    Footer
+      
