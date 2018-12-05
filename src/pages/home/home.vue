@@ -26,7 +26,7 @@ export default {
         spaceBetween: 30,
         effect: 'fade',
         speed: 1000,
-        autoHeight: true,
+        autoheight: true,
         autoplay: {
           delay: 7000,
           disableOnInteraction: false
