@@ -45,7 +45,6 @@ import AppointmentThankYou from '@/pages/appointment-thank-you/appointment-thank
 import ReferaFfriendThankYou from '@/pages/refer-a-friend-thank-you/refer-a-friend-thank-you'
 import PostAppointmentThankYou from '@/pages/post-appointment-thank-you/post-appointment-thank-you'
 import Contact from '@/pages/contact-us/contact-us'
-import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
 
@@ -332,9 +331,9 @@ const router = new VueRouter({
     },
     {
       path: '/*',
-      name: 'page-not-found',
+      name: 'home',
       navigation: false,
-      component: PageNotFound
+      component: Home
     }
   ],
   scrollBehavior
