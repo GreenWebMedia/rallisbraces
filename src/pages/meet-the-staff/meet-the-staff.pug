@@ -17,10 +17,26 @@
         header
           h1(v-if='props.acf.heading' v-html='props.acf.heading')
         #main-content2(v-if='props' v-html='props.content.rendered')
-        .team(v-if='props' v-for="team in props.acf.team_members")
-          img.team-photo(v-bind:src='team.team_photo.url' alt='team member')
-          h2(v-html:span='team.name')
-          h3(v-html:span='team.designation')
-          p(v-html:span='team.description')     
+        .two__doctors
+          .doctors
+            img(:src="props.acf.doctor_one.image")
+            .title__doc
+              h4(v-html:P="props.acf.doctor_one.title")
+            .designation(v-html:P="props.acf.doctor_one.designation")
+            p(v-html:P="props.acf.doctor_one.short_content")
+            router-link.read-more(:to="props.acf.doctor_one.link") Read more
+          .doctors
+            img(:src="props.acf.doctor_two.image")
+            .title__doc
+              h4(v-html:P="props.acf.doctor_two.title")
+            .designation(v-html:P="props.acf.doctor_two.designation")
+            p(v-html:P="props.acf.doctor_two.short_content")
+            router-link.read-more(:to="props.acf.doctor_two.link") Read more
+        .all-team
+            .team(v-if='props' v-for="team in props.acf.team_members")
+              img.team-photo(v-bind:src='team.team_photo.url' alt='team member')
+              h2(v-html:span='team.name')
+              h3(v-html:span='team.designation')
+              p(v-html:span='team.description')     
     Footer
       

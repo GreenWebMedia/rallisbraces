@@ -1,11 +1,7 @@
-const route = '//rallisbraces.com/wp-json'
+const route = 'https://rallisbraces.com/wp-json'
 
 const api = () => {
-  try {
-    return (document.location.protocol === 'https:' ? 'https:' : 'http://') + route
-  } catch (e) {
-    return 'https://' + route
-  }
+  return document.location.hostname === 'localhost' || document.location.href.indexOf('roostertest3') > -1 ? route : document.location.protocol + '/wp-json'
 }
 
 export default api()
